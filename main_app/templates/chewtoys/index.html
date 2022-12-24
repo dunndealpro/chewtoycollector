@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Chew Toy List</h1>
+
+{% for chewtoy in chewtoys %}
+<div class="card">
+  <a href="/chewtoys/{{ chewtoy.id }}">
+    <div class="card-content">
+      <span class="card-title">{{ chewtoy.name }}</span>
+      <p>type: {{ chewtoy.type }}</p>
+      <p>Description: {{ chewtoy.description }}</p>
+      {% if chewtoy.age > 0 %}
+      <p>Age: {{ chewtoy.age }}</p>
+      {% else %}
+      <p>Age: Owsh, just a baby</p>
+      {% endif %}
+    </div>
+  </a>
+</div>
+{% endfor %} {% endblock %}
