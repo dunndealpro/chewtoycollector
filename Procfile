@@ -1,0 +1,1 @@
+web: chewtoycollector.wsgi
