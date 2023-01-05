@@ -23,6 +23,7 @@ urlpatterns = [
         name="add_cleaning",
     ),
     path('chewtoys/<int:chewtoy_id>/assoc_dog/<int:dog_id>/', views.assoc_dog, name='assoc_dog'),
+    path('chewtoys/<int:chewtoy_id>/unassoc_dog/<int:dog_id>/', views.unassoc_dog, name='unassoc_dog'),
     path("dogs/", views.DogList.as_view(), name="dogs_index"),
     path("dogs/<int:pk>/", views.DogDetail.as_view(), name="dogs_detail"),
     path("dogs/create/", views.DogCreate.as_view(), name="dogs_create"),

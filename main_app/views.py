@@ -64,7 +64,7 @@ def assoc_dog(request, chewtoy_id, dog_id):
   return redirect('detail', chewtoy_id=chewtoy_id)
 
 def unassoc_dog(request, chewtoy_id, dog_id):
-  chewtoy = chewtoy.objects.get(id=chewtoy_id)
+  chewtoy = Chewtoy.objects.get(id=chewtoy_id)
   chewtoy.dogs.remove(dog_id)
   return redirect('detail', chewtoy_id=chewtoy_id)
 

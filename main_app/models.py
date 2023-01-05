@@ -4,8 +4,6 @@ from datetime import date
 
 # Create your models here.
 
-
-
 TIMESOFDAY = (
     ('M', 'Morning'),
     ('A', 'Afternoon'),
