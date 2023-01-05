@@ -31,6 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -73,14 +74,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'chewtoycollector.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'chewtoycollector',
+        'NAME': os.environ['DATABASE_NAME'],
+        'USER': os.environ['DATABASE_NAME'],
+        'PASSWORD': os.environ['DATABASE_PASSWORD'],
+        'HOST': os.environ['DATABASE_SERVER'],
+        'PORT': 5432
     }
 }
 
