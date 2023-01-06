@@ -1,1 +1,1 @@
-web: chewtoycollector.wsgi
+web: gunicorn chewtoycollector.wsgi
